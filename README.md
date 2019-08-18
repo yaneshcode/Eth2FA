@@ -81,6 +81,7 @@ Confirm that your google authentication secret has been stored by the user.
 POST https://eth2fa.com/confirm-setup
 Query Body:
 {
+   "wallet": "0x95fc2b5ff1f40c0df89183eceb8db8692b900a88",
    "code": "855811"
 }
 
