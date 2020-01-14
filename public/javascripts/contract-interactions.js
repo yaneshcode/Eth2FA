@@ -109,13 +109,18 @@ window.onload = async function () {
      window.contract.methods.Sign().send({ from: window.accounts[0] })
        .then(result => {
          console.log(result);
+         document.getElementById("alert-text").innerHTML = " Signed successfully by user!";
+         document.getElementById('formAlert').style.display = "block";
+         hideAlert();
        });
    });
 
    document.getElementById("btnSignServer").addEventListener('click', () => {
      $.get("/sign-server", function(data, status){
       console.log(data);
-      alert("Success! Tx Hash: " + data)
+      document.getElementById("alert-text").innerHTML = " Signed successfully through 2FA server!";
+      document.getElementById('formAlert').style.display = "block";
+      hideAlert();
     });
    });
 
@@ -123,7 +128,13 @@ window.onload = async function () {
      window.contract.methods.Action().send({ from: window.accounts[0] })
        .then(result => {
          console.log(result);
+         document.getElementById("alert-text").innerHTML = " Action taken successfully!";
+         document.getElementById('formAlert').style.display = "block";
+         hideAlert();
        });
    });
 
+   function hideAlert() {
+     setTimeout(function(){ document.getElementById('formAlert').style.display = "none"; }, 5000);
+   }
 }
