@@ -7,9 +7,9 @@ contract TimeLocked {
   address public owner;
   address public server;
   address public owner_backup;
+  address public last_unlocked_by;
   uint public time_lock;
-  address public unlocked_by;
-  
+
   modifier onlyOwner {
     require(msg.sender == owner || msg.sender == owner_backup, "You are not the Owner.");
     _;
@@ -30,11 +30,11 @@ contract TimeLocked {
   function Unlock() public onlyAuthorized {
     // 3 minute window
     time_lock = block.number + 12;
-    unlocked_by = msg.sender;
+    last_unlocked_by = msg.sender;
   }
 
   function SendTo(address payable address_to, uint256 amount) public onlyOwner {
-    require(block.number < time_lock && msg.sender != unlocked_by, "Contract is locked.");
+    require(block.number < time_lock && msg.sender != last_unlocked_by, "Contract is locked.");
     address_to.transfer(amount);
   }
 
