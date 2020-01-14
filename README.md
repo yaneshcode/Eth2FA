@@ -14,7 +14,7 @@ GET https://eth2fa.com/key
 Example Request:
 ``` 
 POST /key HTTP/1.1
-Host: bitbuy.ca
+Host: eth2fa.com
 Connection: keep-alive
 Content-Length: 75
 Accept: */*
@@ -51,7 +51,7 @@ Query Body:
 Example Request:
 ``` 
 POST /setup HTTP/1.1
-Host: bitbuy.ca
+Host: eth2fa.com
 Connection: keep-alive
 Content-Length: 75
 Accept: */*
@@ -90,7 +90,7 @@ Query Body:
 Example Request:
 ``` 
 POST /confirm-setup HTTP/1.1
-Host: bitbuy.ca
+Host: eth2fa.com
 Connection: keep-alive
 Content-Length: 75
 Accept: */*
@@ -128,7 +128,7 @@ Query Body:
 Example Request:
 ``` 
 POST /solve HTTP/1.1
-Host: bitbuy.ca
+Host: eth2fa.com
 Connection: keep-alive
 Content-Length: 75
 Accept: */*
