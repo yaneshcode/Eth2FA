@@ -2,7 +2,7 @@ pragma solidity ^0.6.1;
 
 // A very simple time-locked multi-signature contract for demonstration.
 
-contract MultiSig {
+contract TimeLocked {
 
   address public owner;
   address public server;
