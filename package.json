@@ -1,32 +1,25 @@
 {
   "name": "eth2fa",
-  "version": "1.0.0",
-  "description": "Two factor authentication for Ethereum transactions",
-  "main": "server.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "start-dev": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yaneshcode/Eth2FA.git"
-  },
-  "keywords": [
-    "Ethereum",
-    "2FA",
-    "Two",
-    "Factor",
-    "Authentication",
-    "Eth2FA"
-  ],
-  "author": "yaneshcode, adam-koza",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yaneshcode/Eth2FA/issues"
-  },
-  "homepage": "https://github.com/yaneshcode/Eth2FA#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "speakeasy": "^2.0.0"
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-session": "^1.17.0",
+    "hat": "0.0.3",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "mongodb": "^2.1.4",
+    "passport": "^0.4.1",
+    "passport-2fa-totp": "0.0.1",
+    "passport-remember-me": "0.0.1"
   }
 }

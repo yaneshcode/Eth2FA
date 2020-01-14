@@ -1,0 +1,22 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: black;
+    color: gray;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.profile-page {
+    font-size: 20px;
+}
+
+.logout-panel {
+    margin-top: 30px;
+}
+
+.qr-panel {
+  background-color: white;
+}

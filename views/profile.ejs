@@ -1,0 +1,33 @@
+<% include partials/header.ejs %>
+
+<div class="container profile-page">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <strong>Username:</strong> <%= user.username %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 logout-panel">
+            <a class="btn btn-default" href="/setup-2fa" role="button">Setup Authenticator</a>
+            <a class="btn btn-default" href="/logout" role="button">Logout</a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 contract-panel">
+      <br>
+      <% for (var i = 0; i < errors.length; i++) { %>
+          <div class="alert alert-danger alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <%= errors[i] %>
+          </div>
+      <% } %>
+      <br>
+      <br><br><button id="btnDeploy" class="btn btn-info btn-block" role="button">Deploy Multi-sig Contract</button>
+      <br><br><button id="btnSignOwner" class="btn btn-primary btn-block" role="button">Sign as <%= user.username %></button>
+      <br><br><button id="btnSignServer" class="btn btn-primary btn-block" role="button">Sign through server (2FA)</button>^ This step requires login with 2FA ^
+      <br><br><br><button id="btnAction" class="btn btn-success btn-block" role="button">Take Action</button>
+
+    </div>
+</div>
+<script type="module" src="/javascripts/contract-interactions.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<% include partials/footer.ejs %>
