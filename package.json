@@ -17,7 +17,7 @@
     "hat": "0.0.3",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
-    "mongodb": "^2.1.4",
+    "mongodb": "^3.1.13",
     "passport": "^0.4.1",
     "passport-2fa-totp": "0.0.1",
     "passport-remember-me": "0.0.1"
